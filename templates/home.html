@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Presentation Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #fbe9e7, #ffe0b2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #6d4c41;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        form {
+            background: #fff8f0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        input[type=file] {
+            padding: 12px;
+            border: 2px dashed #d7ccc8;
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 15px;
+            background-color: #fff;
+            color: #5d4037;
+        }
+
+        select, input[type=submit] {
+            padding: 12px;
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        select {
+            background-color: #ffe0b2;
+            color: #5d4037;
+            border: 1px solid #d7ccc8;
+        }
+
+        input[type=submit] {
+            background-color: #ff7043;
+            color: white;
+        }
+
+        input[type=submit]:hover {
+            background-color: #f4511e;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #8d6e63;
+        }
+    </style>
+</head>
+<body>
+    <h2>🌞 AI Presentation Generator</h2>
+    <form action="/generate" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" accept=".pdf,.docx,.txt" required><br>
+        <select name="mode">
+            <option value="short">Short (6–7 slides)</option>
+            <option value="full">Full (10–15 slides)</option>
+        </select><br>
+        <input type="submit" value="Generate Presentation">
+    </form>
+    <div class="footer">Built with FastAPI + Groq LLM ⚡</div>
+</body>
+</html>

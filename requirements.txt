@@ -1,0 +1,43 @@
+sentence-transformers
+
+# Web framework
+fastapi
+uvicorn
+
+# PDF parsing
+pypdf
+
+# PPTX generation
+python-pptx
+
+# LangChain ecosystem
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langsmith
+
+# LLM integration
+groq
+
+# Vector DB
+chromadb
+
+# Data handling
+pandas
+numpy
+
+# API key management
+python-dotenv
+
+# File upload support
+python-multipart
+
+# Logging & resilience
+rich
+tenacity
+python-json-logger
+
+# Optional performance boost
+uvloop
+orjson
